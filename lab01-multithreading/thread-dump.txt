@@ -1,0 +1,201 @@
+2026-10-22 21:17:15
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (21.0.7+8-LTS-245 mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x000001fecc974ff0, length=19, elements={
+0x000001feaa7b0c40, 0x000001fecc690bb0, 0x000001fecc694720, 0x000001fecc697180,
+0x000001fecc697d00, 0x000001fecc6a1c30, 0x000001fecc7e0780, 0x000001fecc6a72b0,
+0x000001fecc6a7e70, 0x000001fecc9ae760, 0x000001fecc9afde0, 0x000001fecca7d1a0,
+0x000001fecca957d0, 0x000001fecca9e430, 0x000001fecca9eea0, 0x000001feccaaf4e0,
+0x000001feccabe590, 0x000001feccabf210, 0x000001feccac20a0
+}
+
+"main" #1 [21460] prio=5 os_prio=0 cpu=15.62ms elapsed=979.83s tid=0x000001feaa7b0c40 nid=21460 in Object.wait()  [0x000000b6907fe000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.7/Native Method)
+	- waiting on <0x0000000714318848> (a java.lang.Thread)
+	at java.lang.Object.wait(java.base@21.0.7/Object.java:366)
+	at java.lang.Thread.join(java.base@21.0.7/Thread.java:2078)
+	- locked <0x0000000714318848> (a java.lang.Thread)
+	at java.lang.Thread.join(java.base@21.0.7/Thread.java:2154)
+	at edu.itc.se.lab01.task5.Main.main(Main.java:39)
+
+"Reference Handler" #9 [5748] daemon prio=10 os_prio=2 cpu=0.00ms elapsed=979.82s tid=0x000001fecc690bb0 nid=5748 waiting on condition  [0x000000b690fff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.7/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.7/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.7/Reference.java:208)
+
+"Finalizer" #10 [19904] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=979.82s tid=0x000001fecc694720 nid=19904 in Object.wait()  [0x000000b6910ff000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.7/Native Method)
+	- waiting on <0x000000071440c2e8> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.7/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.7/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.7/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.7/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.7/NativeReferenceQueue.java:89)
+	- locked <0x000000071440c2e8> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.7/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [17424] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=979.82s tid=0x000001fecc697180 nid=17424 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #12 [16264] daemon prio=5 os_prio=2 cpu=0.00ms elapsed=979.82s tid=0x000001fecc697d00 nid=16264 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #13 [21016] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=979.82s tid=0x000001fecc6a1c30 nid=21016 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #14 [18980] daemon prio=9 os_prio=0 cpu=15.62ms elapsed=979.81s tid=0x000001fecc7e0780 nid=18980 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #15 [14348] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=979.81s tid=0x000001fecc6a72b0 nid=14348 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #23 [14940] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=979.81s tid=0x000001fecc6a7e70 nid=14940 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #27 [6876] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=979.81s tid=0x000001fecc9ae760 nid=6876 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #28 [20772] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=979.81s tid=0x000001fecc9afde0 nid=20772 waiting on condition  [0x000000b6919ff000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.7/Native Method)
+	- parking to wait for  <0x00000007145e3e98> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.7/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.7/AbstractQueuedSynchronizer.java:1852)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.7/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.7/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.7/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.7/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.7/InnocuousThread.java:186)
+
+"transfer-0" #29 [11512] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001fecca7d1a0 nid=11512 waiting for monitor entry  [0x000000b691aff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:31)
+	- waiting to lock <0x00000007145e8b68> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x00000007145e8b98> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-1" #30 [3008] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001fecca957d0 nid=3008 waiting for monitor entry  [0x000000b691bff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:30)
+	- waiting to lock <0x00000007145e8b50> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-2" #31 [13660] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001fecca9e430 nid=13660 waiting for monitor entry  [0x000000b691cff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:30)
+	- waiting to lock <0x00000007145e8b50> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-3" #32 [5972] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001fecca9eea0 nid=5972 waiting for monitor entry  [0x000000b691dff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:31)
+	- waiting to lock <0x00000007145e8b98> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x00000007145e8b50> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-4" #33 [21368] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001feccaaf4e0 nid=21368 waiting for monitor entry  [0x000000b691efe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:30)
+	- waiting to lock <0x00000007145e8b80> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-5" #34 [8812] prio=5 os_prio=0 cpu=15.62ms elapsed=979.79s tid=0x000001feccabe590 nid=8812 waiting for monitor entry  [0x000000b691fff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:31)
+	- waiting to lock <0x00000007145e8b68> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x00000007145e8b80> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-6" #35 [10572] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001feccabf210 nid=10572 waiting for monitor entry  [0x000000b6920ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:30)
+	- waiting to lock <0x00000007145e8b68> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"transfer-7" #36 [10076] prio=5 os_prio=0 cpu=0.00ms elapsed=979.79s tid=0x000001feccac20a0 nid=10076 waiting for monitor entry  [0x000000b6921fe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:31)
+	- waiting to lock <0x00000007145e8b98> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x00000007145e8b68> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+"VM Thread" os_prio=2 cpu=15.62ms elapsed=979.82s tid=0x000001fecc6782c0 nid=3456 runnable  
+
+"VM Periodic Task Thread" os_prio=2 cpu=203.12ms elapsed=979.82s tid=0x000001fecc664e50 nid=13196 waiting on condition  
+
+"G1 Service" os_prio=2 cpu=31.25ms elapsed=979.83s tid=0x000001fecc537940 nid=13320 runnable  
+
+"G1 Refine#0" os_prio=2 cpu=0.00ms elapsed=979.83s tid=0x000001fecc536f30 nid=11620 runnable  
+
+"G1 Conc#0" os_prio=2 cpu=0.00ms elapsed=979.83s tid=0x000001feacad99d0 nid=10540 runnable  
+
+"G1 Main Marker" os_prio=2 cpu=0.00ms elapsed=979.83s tid=0x000001feacad8ed0 nid=14148 runnable  
+
+"GC Thread#0" os_prio=2 cpu=0.00ms elapsed=979.83s tid=0x000001feacac6b80 nid=3604 runnable  
+
+JNI global refs: 13, weak refs: 0
+
+
+Found one Java-level deadlock:
+=============================
+"transfer-0":
+  waiting to lock monitor 0x000001fecc9c6df0 (object 0x00000007145e8b68, a edu.itc.se.lab01.task5.Bank$Account),
+  which is held by "transfer-7"
+
+"transfer-7":
+  waiting to lock monitor 0x000001fecc9c7250 (object 0x00000007145e8b98, a edu.itc.se.lab01.task5.Bank$Account),
+  which is held by "transfer-0"
+
+Java stack information for the threads listed above:
+===================================================
+"transfer-0":
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:31)
+	- waiting to lock <0x00000007145e8b68> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x00000007145e8b98> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+"transfer-7":
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:31)
+	- waiting to lock <0x00000007145e8b98> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x00000007145e8b68> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Main.lambda$main$0(Main.java:31)
+	at edu.itc.se.lab01.task5.Main$$Lambda/0x000001fece000dd8.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.7/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.7/Thread.java:1583)
+
+Found 1 deadlock.
+
